@@ -79,9 +79,42 @@ public class NewBehaviourScript : MonoBehaviour {
 
 ## 整理相关学习资料，编写简单代码验证以下技术的实现： 
 - 查找对象
+	
+
+```
+/*Name*/
+	GameObject.Find("Hand");//Find by name
+/*Tag*/
+	GameObject.FindGameObjectsWithTag("bodyparts");//Find all with the same tag
+	GameObject.FindWithTag("bodyparts");//Find the first with the tag
+
+```
+
 - 添加子对象
+```
+/*
+We here assume a GameObject child has created 
+(using CreatePrimitive or any other ways)
+And there is also a GameObject parent.
+The key to "create" a child object is to link the child to the parent.
+*/	
+child.transform.SetParent(parent);
+```
 - 遍历对象树
+```
+/*Presume here the co-parent is parent*/
+foreach (Transform child in parent.transform) {
+      //do something about child.gameObject, 
+      //for the component "Transform" is always attached to a GameObject
+}
+```
 - 清除所有子对象
+```
+/*Still we presume here the co-parent is a GameObject parent*/
+foreach (Transform child in parent.transform) {
+      Destroy(child.gameObject);
+}
+```
 
 ## 资源预设（Prefabs）与 对象克隆 (clone) 
 - 预设（Prefabs）有什么好处？
