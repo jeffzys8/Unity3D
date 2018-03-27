@@ -14,8 +14,51 @@
 
 ## 编写一个代码，使用 debug 语句来验证 MonoBehaviour 基本行为或事件触发的条件
 - 基本行为包括 Awake() Start() Update() FixedUpdate() LateUpdate()
-- 常用事件包括 OnGUI() OnDisable() OnEnable()
+- 常用事件包括 OnGUI() OnDisable() 
 
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    void Awake()
+    {
+        Debug.Log("Awake");
+    }
+    void Start()
+    {
+        Debug.Log("Start");
+    }
+    void Update()
+    {
+        Debug.Log("Update");
+    }
+    void FixedUpdate()
+    {
+        Debug.Log("FixedUpdate");
+    }
+    void LateUpdate()
+    {
+        Debug.Log("LateUpdate");
+    }
+    void OnGUI()
+    {
+        Debug.Log("OnGUI");
+    }
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+    }
+    void OnEnable()
+    {
+        Debug.Log("OnEnable");
+    }
+}
+```
+- ![pro2](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/basic_concepts/screenshot1.jpg)
+```
 
 ## 查找脚本手册，了解 GameObject，Transform，Component 对象	
 	- **分别翻译官方对三个对象的描述（Description）**
