@@ -18,3 +18,8 @@
 - “难度”栏调整难度，左调低，右调高（我不信有人能玩最右→_→）
 - 点击开始游戏后，老鼠会随机出现在游戏框内，在它消失之前需点击它，否则游戏失败
 - 游戏结束后会显示上一局的游戏得分
+
+## Screenshots
+![screenshot1](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/Whac-A-Mole/screenshots/screenshot1.jpg)
+![screenshot2](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/Whac-A-Mole/screenshots/screenshot2.jpg)
+![screenshot3](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/Whac-A-Mole/screenshots/screenshot3.jpg)
