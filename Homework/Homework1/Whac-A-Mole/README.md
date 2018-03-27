@@ -12,3 +12,4 @@
 - 然后将cs文件添加到Main Camera的Component里
 - 然后从Assets文件夹里将图片添加到该cs文件的属性内
 - 结果如图所示
+![finish](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/Whac-A-Mole/finish_screenshot.jpg)
