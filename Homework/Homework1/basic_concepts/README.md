@@ -2,7 +2,6 @@
 
 ## 解释 游戏对象（GameObjects） 和 资源（Assets）的区别与联系。
 
-
 - 区别
 	- 游戏对象：<br />我们在游戏中看到的任何场景、角色等对象都是游戏对象或者游戏对象的组合。<br/>游戏对象自身包含了**属性和行为**<br />游戏对象属于**游戏过程**的一员
 	- 资源：<br />资源通常包括对象、材质、场景、声音、预设、贴图、脚本、动作等；在项目中被导入到资源文件夹中。<br />资源属于**游戏编程**的一员，在游戏过程中被实例化为游戏对象或游戏对象的一部分
@@ -62,6 +61,9 @@ public class NewBehaviourScript : MonoBehaviour {
 
 ## 查找脚本手册，了解 GameObject，Transform，Component 对象	
 - 分别翻译官方对三个对象的描述（Description）
+	- GameObject: 游戏对象是Unity中最基础的对象，它可以代表角色、 物品或场景。它们本身并不发挥很大的作用，但他们是**组件**的容器，后者真正地展现了游戏的功能。
+	- Transform: Transform存储了场景中每一个物体的位置、旋转角度、缩放大小和继承状态，因此非常重要。每一个游戏对象都有一个Transform组件，无法被移除。
+	- Component: 添加到游戏对象的一切事物的基类。
 - 描述下图中 table 对象（实体）的属性、table 的 Transform 的属性、 table 的部件 
 	- 本题目要求是把可视化图形编程界面与 Unity API 对应起来，当你在 Inspector 面板上每一个内容，应该知道对应 API。
 	- 例如：table 的对象是 GameObject，第一个选择框是 activeSelf 属性。
