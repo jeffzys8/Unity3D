@@ -56,7 +56,7 @@ public class NewBehaviourScript : MonoBehaviour {
     }
 }
 ```
-![pro2](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/basic_concepts/screenshot1.jpg)
+![screenshot1](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/basic_concepts/screenshot1.jpg)
 
 
 ## 查找脚本手册，了解 GameObject，Transform，Component 对象	
@@ -118,7 +118,36 @@ foreach (Transform child in parent.transform) {
 
 ## 资源预设（Prefabs）与 对象克隆 (clone) 
 - 预设（Prefabs）有什么好处？
+	- 可提前制作或同步制作，提高效率，缩短制作周期
+	- 避免重复造轮子
 - 预设与对象克隆 (clone or copy or Instantiate of Unity Object) 关系？
+	- 预设相当于模板，在预设做出更改时，其所链接的实例也会相应被更改
+	- 对象克隆仅仅是克隆了一个实例，原对象与新对象无关联
 - 制作 table 预制，写一段代码将 table 预制资源实例化成游戏对象
 
 ## 尝试解释组合模式（Composite Pattern / 一种设计模式）。使用 BroadcastMessage() 方法 向子对象发送消息
+
+-	组合模式又叫**部分-整体模式**，是指在该模式下用户可以将对象用树形的形式（例如parent-child）来表示对象的层次结构,这样的话用户用一种方式就可以处理对象以及对象的集合
+
+```c#
+/* for Parent.cs */
+public class Parent : MonoBehaviour {
+    void ApplyDamage(float damage) {
+        print("Parent got hurt:"+damage);
+    }
+    void Example() {
+		this.BroadcastMessage("ApplyDamage", 5.0F);
+    }
+    void Start(){
+		Example();
+	}
+}
+
+/* for Child.cs */
+public class Child : MonoBehaviour {
+    void ApplyDamage(float damage) {
+        print("Child got hurt:"+damage);
+    }
+}
+```
+![screenshot2](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/basic_concepts/screenshot2.jpg)
