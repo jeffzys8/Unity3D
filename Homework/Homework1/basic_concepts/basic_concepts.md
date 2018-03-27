@@ -76,7 +76,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		- Transform.rotation(Quaternion)
 		- Transform.scale(Vector3)
 - 用 UML 图描述 三者的关系（请使用 UMLet 14.1.1 stand-alone版本出图）
-
+![screenshot4](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/basic_concepts/screenshot4.jpg)
 ## 整理相关学习资料，编写简单代码验证以下技术的实现： 
 - 查找对象
 	
