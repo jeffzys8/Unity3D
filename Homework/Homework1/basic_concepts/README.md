@@ -66,10 +66,15 @@ public class NewBehaviourScript : MonoBehaviour {
 	- Component: 添加到游戏对象的一切事物的基类。
 - 描述下图中 table 对象（实体）的属性、table 的 Transform 的属性、 table 的部件 
 	- table对象（实体）的属性
-		- activeSelf (true)
-		- name ("GameObject")
-		- Tag ("Untagged")
-		- Layer ("Default")
+		- GameObject.activeSelf (bool)
+		- Object.name (string)
+		- GameObject.isStatic(bool)
+		- GameObject.tag (string)
+		- GameObject.layer (int)
+	- Transform 的属性
+		- Transform.position(Vector3)
+		- Transform.rotation(Quaternion)
+		- Transform.scale(Vector3)
 - 用 UML 图描述 三者的关系（请使用 UMLet 14.1.1 stand-alone版本出图）
 
 ## 整理相关学习资料，编写简单代码验证以下技术的实现： 
