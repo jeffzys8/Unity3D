@@ -65,8 +65,11 @@ public class NewBehaviourScript : MonoBehaviour {
 	- Transform: Transform存储了场景中每一个物体的位置、旋转角度、缩放大小和继承状态，因此非常重要。每一个游戏对象都有一个Transform组件，无法被移除。
 	- Component: 添加到游戏对象的一切事物的基类。
 - 描述下图中 table 对象（实体）的属性、table 的 Transform 的属性、 table 的部件 
-	- 本题目要求是把可视化图形编程界面与 Unity API 对应起来，当你在 Inspector 面板上每一个内容，应该知道对应 API。
-	- 例如：table 的对象是 GameObject，第一个选择框是 activeSelf 属性。
+	- table对象（实体）的属性
+		- activeSelf (true)
+		- name ("GameObject")
+		- Tag ("Untagged")
+		- Layer ("Default")
 - 用 UML 图描述 三者的关系（请使用 UMLet 14.1.1 stand-alone版本出图）
 
 ## 整理相关学习资料，编写简单代码验证以下技术的实现： 
