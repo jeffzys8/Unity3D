@@ -124,6 +124,28 @@ foreach (Transform child in parent.transform) {
 	- 预设相当于模板，在预设做出更改时，其所链接的实例也会相应被更改
 	- 对象克隆仅仅是克隆了一个实例，原对象与新对象无关联
 - 制作 table 预制，写一段代码将 table 预制资源实例化成游戏对象
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class prefab1 : MonoBehaviour {
+    public Transform prefab;
+
+    // Use this for initialization
+    void Start () {
+        for (int i = 0; i < 5; ++i)
+        {
+            for (int e = 0; e < 5; ++e)
+            {
+                Instantiate(prefab, new Vector3(i * 4.0f, e * 4.0f, 0), Quaternion.identity);
+            }
+        }
+    }
+}
+
+```
+![screenshot3](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework1/basic_concepts/screenshot3.jpg)
 
 ## 尝试解释组合模式（Composite Pattern / 一种设计模式）。使用 BroadcastMessage() 方法 向子对象发送消息
 
