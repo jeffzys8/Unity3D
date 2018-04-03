@@ -33,7 +33,7 @@ public class hi : MonoBehaviour {
 ```
 
 
-### 方法二【用Transform.Translate方法】
+### 方法二【调用Transform.Translate方法】
 
 基本上与方法一一致，只改了注释代码
 ```csharp
@@ -57,37 +57,37 @@ public class hi : MonoBehaviour {
 }
 
 ```
-### 方法三【调用Vector3.MoveTowards()方法】
-    
-    ```
-    public class parabola_3 : MonoBehaviour {
+### 方法三【调用Vector3.MoveTowards方法】
+![formula_2](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/basic_concepts/formula_2.jpg)
 
-    	public float speed;
-    	// Use this for initialization
-    	void Start () {
-    		this.transform.position = Vector3.zero;
-    	}
-    
-    	// Update is called once per frame
-    	void Update () {
-    		float step = speed * Time.deltaTime;
-    
-    		float rightOffset = step;
-    		float previousX = this.transform.position.x;
-    		float currentX = previousX + rightOffset;
-    		float upOffset = FunctionValue (currentX) - FunctionValue (previousX);
-    		float previousY = this.transform.position.y;
-    		float currentY = previousY + upOffset;
-    		Vector3 target = new Vector3 (currentX, currentY, this.transform.position.z);
-    
-    		this.transform.position = Vector3.MoveTowards (this.transform.position, target, step);
-    	}
-    
-    	//return the y-position of the function y = x(5-x) when x is given 
-    	float FunctionValue(float x) {
-    		return x * (5 - x);
-    	}
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class hi : MonoBehaviour {
+
+    readonly float v_x = -5;
+    readonly float v_y = 10;
+    readonly float g = 9.8f;
+    float origin_x, origin_y;
+    float t;
+    private void Start()
+    {
+        origin_x = transform.position.x;
+        origin_y = transform.position.y;
+        t = 0;
     }
+    void Update()
+    {
+        t += Time.deltaTime;
+        print(t);
+        float pos_x = origin_x + v_x * t;
+        float pos_y = origin_y + v_y * t - g * t * t / 2;
+        this.transform.position = Vector3.MoveTowards(this.transform.position,new Vector3(pos_x,pos_y,0),10);
+    }
+}
+```
 
 ## 写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上。
  
