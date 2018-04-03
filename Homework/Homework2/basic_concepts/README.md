@@ -1,5 +1,5 @@
 # 简答题
-
+<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;">
 ## 游戏对象运动的本质是什么？
 
 - 游戏对象运动的本质是通过在每个极短时间的Frame内改变游戏对象的transform属性实现运动效果的。
