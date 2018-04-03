@@ -141,4 +141,4 @@ public class Solar : MonoBehaviour
 
 - 第四步，把这个脚本挂在MainCamera上：
 
-![效果图]()
+![效果图](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/SolarSystem/Soloar_screenshot.jpg)
