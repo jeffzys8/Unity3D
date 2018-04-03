@@ -21,4 +21,4 @@
 ![](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/PriestsAndEvils/PandD_screenshot.jpg)
 
 ## 游戏视频
-![](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/PriestsAndEvils/PandD_video.avi)
+[视频链接](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/PriestsAndEvils/PandD_video.avi)
