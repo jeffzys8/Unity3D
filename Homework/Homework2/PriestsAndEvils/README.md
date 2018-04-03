@@ -1,5 +1,13 @@
 # 牧师与魔鬼
-> README未完工，
+
+## 游戏对象
+对象名称 | 描述
+------------ | ------------- 
+ water|作为背景的水   
+ boat|水上可来回运载character的船
+ land * 2|两边的陆地，其中一边是from，一边是to
+ character牧师 * 3 |无
+ character魔鬼 * 3 |无
 
 
  
