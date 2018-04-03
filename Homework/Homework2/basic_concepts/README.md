@@ -128,11 +128,11 @@ public class Solar : MonoBehaviour
         //...略
     }
 }
-    ```
+```
 
 - 第三步：Update函数中每个极短时间deltaTime内用两个旋转函数更新自转和公转的状态。 
 
-  ```csharp
+```csharp
   void Update () {
   	//RotateAround第三个参数都是不同的
   	Mercury.RotateAround (sun.position, axisMercury, 20*Time.deltaTime);
@@ -145,7 +145,7 @@ public class Solar : MonoBehaviour
   	Neptune.RotateAround (sun.position, axisNeptune, 4*Time.deltaTime);
   	Neptune.Rotate (Vector3.up*30*Time.deltaTime);
   }
-  ```
+```
 
 - 第四步，把这个脚本挂在MainCamera上：
 
