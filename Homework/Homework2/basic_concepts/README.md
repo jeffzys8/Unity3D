@@ -33,31 +33,30 @@ public class hi : MonoBehaviour {
 ```
 
 
-### 方法二【用Transform.Translate()方法】
-    ```
-    public class parabola_2 : MonoBehaviour {
+### 方法二【用Transform.Translate方法】
 
-    	public float speed;
-    	// Use this for initialization
-    	void Start () {
-    		this.transform.position = Vector3.zero;
-    	}
-    	
-    	// Update is called once per frame
-    	void Update () {
-    		float rightOffset = speed * Time.deltaTime;
-    		float previousX = this.transform.position.x;
-    		float currentX = previousX + rightOffset;
-    		float upOffset = speed * (FunctionValue (currentX) - FunctionValue (previousX));
-    
-    		this.transform.Translate (rightOffset, upOffset, 0);
-    	}
-    
-    	//return the y-position of the function y = x(5-x) when x is given 
-    	float FunctionValue(float x) {
-    		return x * (5 - x);
-    	}
+基本上与方法一一致，只改了注释代码
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class hi : MonoBehaviour {
+
+    float v_x = -5;
+    float v_y = 10;
+    float g = 9.8f;
+    void Update()
+    {
+        float delta_x = v_x * Time.deltaTime;
+        float delta_y = Time.deltaTime * (v_y - 1 / 2 * g * Time.deltaTime);
+        v_y -= g * Time.deltaTime;
+        this.transform.Translate(delta_x, delta_y, 0);  //change only here
+
     }
+}
+
+```
 ### 方法三【调用Vector3.MoveTowards()方法】
     
     ```
