@@ -9,6 +9,15 @@
  character牧师 * 3 |无
  character魔鬼 * 3 |无
 
+## 玩家动作规则表
 
+动作|效果|备注
+---|---|---
+点击船||
+点击character||
+点击重新开始按钮||
  
+## 游戏效果截图
 ![](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/PriestsAndEvils/PandD_screenshot.jpg)
+
+## 游戏视频
