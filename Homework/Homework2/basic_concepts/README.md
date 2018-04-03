@@ -8,22 +8,22 @@
 ## 请用三种方法以上方法，实现物体的抛物线运动。（如，修改Transform属性，使用向量Vector3的方法…）
  
 ### 方法一【直接改变transform.position的值】
-    ```
 
-    	// Update is called once per frame
-    	void Update () {
-    		float rightOffset = speed * Time.deltaTime;
-    		float previousX = this.transform.position.x;
-    		float currentX = previousX + rightOffset;
-    		float upOffset = speed * (func (currentX) - func (previousX));
+    ![formula_1](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework2/basic_concepts/formula_1.jpg)
+    
+    ```
     
-    		this.transform.position += Vector3.right * rightOffset;
-    		this.transform.position += Vector3.up * upOffset;
-    	}
-    	float func(float x) {
-    		return x * (5 - x);
-    	}
-    }
+    	float v_x = -5;
+        float v_y = 10;
+        float g = 9.8f;
+        void Update()
+        {
+            float delta_x = v_x * Time.deltaTime;
+            float delta_y = Time.deltaTime * (v_y - 1 / 2 * g * Time.deltaTime);
+            v_y -= g * Time.deltaTime;
+            this.transform.position += new Vector3(delta_x, delta_y);
+
+        }
     ```
 ### 方法二【用Transform.Translate()方法】
     ```
