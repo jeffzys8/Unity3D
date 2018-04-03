@@ -30,8 +30,9 @@ public class hi : MonoBehaviour {
 
     }
 }
+```
 
-    ```
+
 ### 方法二【用Transform.Translate()方法】
     ```
     public class parabola_2 : MonoBehaviour {
