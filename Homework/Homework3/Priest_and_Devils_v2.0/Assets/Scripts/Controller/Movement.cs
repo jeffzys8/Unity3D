@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Controller
 {
-
     //动作管理，MonoBehaviour
     public class Movement : MonoBehaviour
     {

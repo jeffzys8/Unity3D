@@ -32,21 +32,6 @@ namespace Controller.MyGameObject
             boat.AddComponent(typeof(View.Scene1.ClickGameObject));//为船只增加可点击事件
         }
 
-
-        public void Move()
-        {
-            if (side == -1)
-            {
-                move.setDestination(fromPosition);
-                side = 1;
-            }
-            else
-            {
-                move.setDestination(toPosition);
-                side = -1;
-            }
-        }
-
         public int getEmptyIndex()
         {
             for (int i = 0; i < passenger.Length; i++)
@@ -134,7 +119,20 @@ namespace Controller.MyGameObject
             }
             return count;
         }
-
+        public void Move()
+        {
+            var a = (Director.getInstance().currentSceneController as Controller.Scene.SceneController_1).movement_ctrler;
+            if (side == -1)
+            {
+                a.MoveBoat(side);
+                side = 1;
+            }
+            else
+            {
+                a.MoveBoat(side);
+                side = -1;
+            }
+        }
         public void reset()
         {
             move.reset();

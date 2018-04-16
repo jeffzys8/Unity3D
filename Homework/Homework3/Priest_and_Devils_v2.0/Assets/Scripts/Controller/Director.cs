@@ -20,7 +20,6 @@ namespace Controller
 
         public static Director getInstance()
         {
-            GameObject a = new GameObject();
             
             if (_instance == null)
             {

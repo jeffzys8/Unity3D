@@ -3,24 +3,31 @@ using UnityEngine;
 
 namespace Controller.Scene
 {
+    
     public class SceneController_1 : MonoBehaviour, SceneController, View_Contrler_Interface_Scene1
     {
         int gameState = 0;  //游戏状态；0-->正在游戏; 1-->赢; 2-->输
         View.Scene1.UserGUI userGUI;    //场景1的UI界面
+        public Controller.Movement_New.CCActionManager_Scene1 movement_ctrler;
 
         //该场景游戏对象
         public Controller.MyGameObject.LandController fromCoast;    //这是下策，具体改进方法见于笔记
-        private Controller.MyGameObject.LandController toCoast;
-        private Controller.MyGameObject.BoatController boat;
-        private Controller.MyGameObject.MyCharacterController[] characters;
+        public Controller.MyGameObject.LandController toCoast;
+        public Controller.MyGameObject.BoatController boat;
+        public Controller.MyGameObject.MyCharacterController[] characters;
         private GameObject water;
-
+        
+        public void SetGameState(int _g)
+        {
+            gameState = _g;
+        }
         //场景开始
         void Start()
         {
             Director director = Director.getInstance();
             director.currentSceneController = this;
             userGUI = gameObject.AddComponent<View.Scene1.UserGUI>() as View.Scene1.UserGUI;
+            movement_ctrler = new Movement_New.CCActionManager_Scene1();
             LoadResources();
         }
 
@@ -65,7 +72,7 @@ namespace Controller.Scene
                 characters[i + 3] = cha;
             }
         }
-        int check_game_over()
+        public int check_game_over()
         {   // 0->not finish, 1->lose, 2->win
             int from_priest = 0;
             int from_devil = 0;
@@ -110,9 +117,16 @@ namespace Controller.Scene
         public int GetGameState() { return gameState; }
         public void BoatClicked()
         {
-            if (!Movement.movable) return;
-            if (boat.isEmpty())
+            if (!movement_ctrler.Movable())
+            {
+                Debug.Log("here");
                 return;
+            }
+            if (boat.isEmpty())
+            {
+                Debug.Log("not here");
+                return;
+            }
             boat.Move();
             gameState = check_game_over();
         }
