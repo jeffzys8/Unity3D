@@ -61,7 +61,6 @@ namespace Controller
                 transform.position += new Vector3(v_x * delta_time, 
                                     v_y * delta_time + 0.5f * accel * delta_time * delta_time,0);
                 time_left -= delta_time;
-                print(v_y * delta_time + 0.5f * accel * delta_time * delta_time);
                 v_y += accel * delta_time;
                 if (time_left <= 0)
                 {
@@ -80,7 +79,6 @@ namespace Controller
             v_y = 0;
             v_x = (x_diff > 0) ? move_speed : -move_speed;
             time_left = System.Math.Abs(x_diff / v_x);
-            Debug.Log("start from " + start + " to " + dest + ", a: " + accel);
             moving_status = 1;
             movable = false;
         }
