@@ -1,3 +1,20 @@
+## 先挂一个UML图吓人
+![UML](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework4/UML.jpg)
+
+## 有关MVC的体现
+- 从整个游戏来看，
+	- 玩家是Model，
+	- 游戏对象和操作界面是View，
+	- 控制器是Controller
+- 从Director/RoundController来看，
+	- RoundController是Model，
+	- Director是Controller，
+	- 其接口IRoundControllerCallback是View
+- 从RoundController/GUI来看，
+	- GUI是Model，
+	- RoundController是Controller，
+	- 其接口IGUICallback是View
+
 ### 有关Director的说明
 我取消了Director的单例模式，并且把Director的脚本挂到了一个空的游戏对象上，因为在我的理解里，
 - Director应该是游戏最初的“发起者”
@@ -36,7 +53,6 @@ Unstart
 |1.5	|0.3|	2|
 |2	|0.1|	4|
 
-![UML](https://github.com/zys980808/Unity3D/blob/master/Homework/Homework4/UML.jpg)
 
 
 
