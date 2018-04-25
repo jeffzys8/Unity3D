@@ -224,7 +224,8 @@
     <Compile Include="Assets\Script\Controller\Director.cs" />
     <Compile Include="Assets\Script\Controller\Disk.cs" />
     <Compile Include="Assets\Script\Controller\DiskFactory.cs" />
-    <Compile Include="Assets\Script\Controller\MoveController.cs" />
+    <Compile Include="Assets\Script\Controller\MoveController_Kinematic.cs" />
+    <Compile Include="Assets\Script\Controller\MoveController_Physics.cs" />
     <Compile Include="Assets\Script\Controller\RoundController.cs" />
     <Compile Include="Assets\Script\Controller\ScoreController.cs" />
     <Compile Include="Assets\Script\Interface.cs" />

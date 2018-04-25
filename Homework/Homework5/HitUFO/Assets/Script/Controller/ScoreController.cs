@@ -23,7 +23,7 @@ namespace Controller
                 //理应抛出异常，但我不会..UNFINISHED
                 return;
             }
-            int score = (int)(a.GetSizeRate() * a.GetSpeedRate() * a.GetColor() * 2);
+            int score = (int)((1/a.GetSizeRate()) * a.GetSpeedRate() * a.GetColor() * 2);
             currentScore += score;
         }
         public void Reset() { currentScore = 0; }

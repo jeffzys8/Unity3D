@@ -55,6 +55,7 @@ namespace Controller
             else
             {
                 Disk temp = new Disk(1, 1, 1);
+                temp.GetGameObject().AddComponent(typeof(ClickGUI));
                 usedDisks.Add(temp);
                 return temp;
 

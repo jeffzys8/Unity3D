@@ -14,3 +14,8 @@ public interface IClickGUICallbackRoundController
 {
     void ClickDisk(Controller.Disk disk);
 }
+
+public interface MoveController
+{
+    void FlyADisk(int level);
+}

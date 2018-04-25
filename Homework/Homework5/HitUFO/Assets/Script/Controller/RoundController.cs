@@ -53,7 +53,7 @@ namespace Controller
             //加载IMGUI
             this.gameObject.AddComponent(typeof(IMGUI));
             //加载动作管理器
-            myMoveCtrler = this.gameObject.AddComponent(typeof(MoveController)) as MoveController;
+            myMoveCtrler = this.gameObject.AddComponent(typeof(MoveController_Physics)) as MoveController;
             //加载积分管理器
             mySocreController = new ScoreController();
 
@@ -119,7 +119,7 @@ namespace Controller
         void StartNextLevel()
         {
             ++level;
-            scoreEveryLevel *= 2;
+            scoreEveryLevel += 100;
             StartGame();
         }
 
